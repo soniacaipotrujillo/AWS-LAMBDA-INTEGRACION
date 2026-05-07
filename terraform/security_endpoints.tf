@@ -15,7 +15,7 @@ resource "aws_security_group" "sg_upload_lambda" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = { Name = "sg-upload-lambda-${var.environment}" }
+  tags = { name = "upload-lambda-sg-${var.environment}" }
 }
 
 # Portero para la Lambda de Recorte (Crop)
@@ -32,7 +32,7 @@ resource "aws_security_group" "sg_crop_lambda" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = { Name = "sg-crop-lambda-${var.environment}" }
+  tags = { name = "crop-lambda-sg-${var.environment}" }
 }
 
 # Portero para el Túnel secreto de SQS
@@ -52,7 +52,7 @@ resource "aws_security_group" "sg_vpce_sqs" {
     ]
   }
 
-  tags = { Name = "sg-vpce-sqs-${var.environment}" }
+  tags = { name = "vpce-sqs-sg-${var.environment}" }
 }
 
 
