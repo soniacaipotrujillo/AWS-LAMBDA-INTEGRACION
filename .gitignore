@@ -1,0 +1,12 @@
+# Terraform
+*/.terraform/
+*.tfstate
+.tfstate.
+crash.log
+*.tfvars
+
+# Node.js (para las lambdas después)
+node_modules/
+.env
+
+terraform.tfstate.d
