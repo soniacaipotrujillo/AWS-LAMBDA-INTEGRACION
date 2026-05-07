@@ -1,7 +1,5 @@
-# variables.tf
-
 variable "aws_region" {
-  description = "La region de AWS donde se desplegara todo"
+  description = "La region donde se crearan los recursos"
   type        = string
   default     = "us-east-1"
 }
@@ -11,7 +9,7 @@ variable "environment" {
   type        = string
 }
 
-variable "bucket_suffix" {
-  description = "Sufijo unico para el bucket S3 (los nombres en S3 deben ser unicos a nivel mundial)"
+variable "developer_suffix" {
+  description = "Tus iniciales o alias para que los nombres sean unicos (ej. pals)"
   type        = string
 }

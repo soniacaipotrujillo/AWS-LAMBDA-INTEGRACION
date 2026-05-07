@@ -1,2 +1,2 @@
 environment   = "prod"
-bucket_suffix = "sc_trujillo"
+bucket_suffix = "sc-trujillo"

@@ -63,7 +63,7 @@ resource "aws_lambda_function" "upload_lambda" {
   timeout       = 30  # Timeout según diagrama
 
   # Usamos el ZIP temporal por ahora
-  file name         = "${path.module}/../src/upload-lambda.zip"
+  filename         = "${path.module}/../src/upload-lambda.zip"
   source_code_hash = filebase64sha256("${path.module}/../src/upload-lambda.zip")
 
   # Lo metemos a la VPC (Cuartos secretos y Porteros)
